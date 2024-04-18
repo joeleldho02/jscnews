@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">  
+  <meta name="description" content="JSC News - Official Media of Jacobite Syrian Church, India">
+  <meta name="keywords" content="jsc news, jacobite news, jsc official">
+  <meta name="author" content="JMJ International">
+  <title>JSC News</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="preload" href="assets/fonts/fml-tt-indulekha-webfont.woff2" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="assets/fonts/fml-tt-indulekha-webfont.woff" as="font" type="font/woff" crossorigin>
+</head>
+<body>
+  <app-root/>
+
+  <script>
+    window.onscroll = function() {
+      if(document.getElementById("user-header") && document.getElementById("user-navbar"))
+        showNavbarOnScroll();
+    };
+
+    function showNavbarOnScroll() {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        document.getElementById("user-header").style.top = "-250px";
+        document.getElementById("user-navbar").style.top = "0";
+        if(document.getElementById("sidebar"))
+          document.getElementById("sidebar").style.paddingTop = "60px";
+      } else {
+        document.getElementById("user-navbar").style.top = "-80px";
+        if(document.getElementById("sidebar"))
+          document.getElementById("sidebar").style.paddingTop = "120px";
+        document.getElementById("user-header").style.top = "0";
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+      document.querySelectorAll('img').forEach(function(img){
+  	  img.onerror = function(){this.style.display='none';};
+      })
+    });
+
+  </script>
+
+</body>
+</html>

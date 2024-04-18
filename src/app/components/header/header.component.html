@@ -1,0 +1,148 @@
+<div id="user-navbar" class="fixed -top-20 z-40 duration-500 bg-white w-full transition-all">
+    <nav class="flex items-center bg-white shadow-lg md:px-12 px-3 justify-between ">
+        <div class="flex items-center gap-4 ">
+            <img src="assets\images\jsc-logo-white-bg.jpg" class="w-10 sm:w-12">
+            <h2 class="text-lg sm:text-xl font-bold">JSC News</h2>
+        </div>
+        <button (click)="openMenu()" data-collapse-toggle="navbar-default" type="button" class=" inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-800 rounded-lg lg:hidden hover:bg-gray-100 " aria-controls="navbar-default" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-7 h-7" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        <div class="hidden lg:block menu p-3 my-1 pb-5">
+            <ul id="menu-main-menu" class="flex items-center justify-center font-medium md:space-x-8">
+                <li id="menu-item-23" class="hover:text-red-600 duration-300 transition">
+                    <a href="/home" aria-current="page">HOME</a>
+                </li>
+                <li class="hidden md:block">|</li>
+                <li id="menu-item-21" class="hover:text-red-600 duration-300 transition">
+                    <a href="/main">MAIN NEWS</a>
+                </li>
+                <li class="hidden md:block">|</li>
+                <li id="menu-item-21" class="hover:text-red-600 duration-300 transition">
+                    <a href="/featured">FEATURED NEWS</a>
+                </li>
+                <li class="hidden md:block">|</li>
+                <li id="menu-item-21" class="hover:text-red-600 duration-300 transition">
+                    <a href="/press-release">PRESS RELEASE</a>
+                </li>
+                <li class="hidden md:block">|</li>
+                <li id="menu-item-21" class="hover:text-red-600 duration-300 transition">
+                    <a href="/live">LIVE</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+
+<header id="user-header" class="sticky top-0 z-40 duration-500 bg-white w-full transition-all"> 
+    <hr class="h-1 bg-red-700 m-0 p-0">
+    <div class="m-auto md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl">
+        <div class="">
+            <div class="hidden md:grid md:grid-cols-6 py-2">
+                <div class="md:col-span-2 flex flex-col lg:flex-row  items-start lg:items-center justify-center lg:gap-5 gap-1">
+                    <div class="flex items-center justify-center">
+                        <p class="text-xs uppercase font-medium text-gray-600">{{ currentDate | date:'fullDate'}}</p>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <div class="p-1 bg-slate-500 w-6 h-6 rounded-full text-center hover:cursor-pointer">
+                            <a href="https://www.facebook.com/JSCNews" class="" target="_blank" ></a>
+                        </div>
+                        <div class="p-1 bg-slate-500 w-6 h-6 rounded-full text-center hover:cursor-pointer">
+                            <a href="https://www.youtube.com/JSCNews" class="" target="_blank" ></a>
+                        </div>
+                        <div class="p-1 bg-slate-500 w-6 h-6 rounded-full text-center hover:cursor-pointer">
+                            <a href="https://www.facebook.com/JSCNews" class="" target="_blank" ></a>
+                        </div>
+                        <div class="p-1 bg-slate-500 w-6 h-6 rounded-full text-center hover:cursor-pointer">
+                            <a href="https://www.facebook.com/JSCNews" class="" target="_blank" ></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:col-span-2 flex items-center justify-center text-center">
+                    <h3 class="text-sm font-medium italic">“Do everything in love.” — 1 Corinthians 16:14</h3>
+                </div>
+                <div class="md:col-span-2 flex items-center justify-end">
+                    <a class="text-xs uppercase font-semibold" title="Breaking News" href="/breaking-news" target="_blank">Breaking News <span class="font-extrabold">>></span></a>
+                </div>
+            </div>
+        </div>
+    </div>   
+    <hr class="bg-gray-400">
+    <div class="m-auto md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl flex items-center justify-center sm:space-x-8 px-2">
+        <div>
+            <img src="assets\images\jsc-logo-white-bg.jpg" class="w-28 sm:w-32">
+        </div>
+        <div class="text-center">
+            <h2 class="text-xl md:text-3xl lg:text-5xl font-bold">JSC News</h2>
+            <h3 class="text-sm md:text-lg lg:text-xl font-bold italic">The Official Media of Holy Jacobite Syrian Christian Church<br> and His Beatitude Catholicos</h3>
+        </div>
+        <div class="">
+            <img src="assets\images\antioch_logo.png" class="hidden sm:block sm:w-20 mx-3">
+        </div>
+        <button (click)="openMenu()" data-collapse-toggle="navbar-default" type="button" class=" inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-800 rounded-lg md:hidden hover:bg-gray-100" aria-controls="navbar-default" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-7 h-7" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+    </div>
+    <hr class="bg-gray-400">    
+    <nav class="hidden md:block ">
+        <div class="menu py-2  shadow-lg  ">
+            <ul id="menu-main-menu" class="m-auto md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl flex items-center justify-center font-medium md:space-x-8">
+                <li id="menu-item-23" class="hover:text-red-600 duration-300 transition">
+                    <a href="/home" aria-current="page">HOME</a>
+                </li>
+                <li class="hidden md:block">|</li>
+                <li id="menu-item-21" class="hover:text-red-600 duration-300 transition">
+                    <a href="/main">MAIN NEWS</a>
+                </li>
+                <li class="hidden md:block">|</li>
+                <li id="menu-item-21" class="hover:text-red-600 duration-300 transition">
+                    <a href="/featured">FEATURED NEWS</a>
+                </li>
+                <li class="hidden md:block">|</li>
+                <li id="menu-item-21" class="hover:text-red-600 duration-300 transition">
+                    <a href="/press-release">PRESS RELEASE</a>
+                </li>
+                <li class="hidden md:block">|</li>
+                <li id="menu-item-21" class="hover:text-red-600 duration-300 transition">
+                    <a href="/live">LIVE</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<nav [ngStyle]="{ 'right.px': sideBarRight }" class="md:hidden transition-all duration-500 fixed top-0 w-full">
+    <div (click)="closeMenu()" [ngStyle]="{ 'inset.px': -sideBarRight }" class="-z-20 fixed bg-gray-500 bg-opacity-75 duration-300 transition-opacity"></div>
+    <div id="sidebar" class="-z-10 float-end menu p-3 shadow-lg md:px-36 h-screen bg-slate-100 w-3/4 pt-32 transition-all duration-500">
+        <div>
+            <p (click)="closeMenu()" class="mb-5 px-3 font-bold flex gap-2 items-center justify-end">Close <span class="text-2xl">&times;</span></p>
+        </div>
+        <ul id="menu-main-menu" class="items-center justify-center font-medium md:space-x-8">
+            <li id="menu-item-23" class="mb-4 py-2 px-3 hover:text-white hover:bg-amber-600 text-black duration-300 transition rounded md:text-left text-center bg-amber-300 md:bg-white">
+                <a href="/home" aria-current="page">HOME</a>
+            </li>
+            <li class="hidden md:block">|</li>
+            <li id="menu-item-23" class="mb-4 py-2 px-3 hover:text-white hover:bg-amber-600 text-black duration-300 transition rounded md:text-left text-center bg-amber-300 md:bg-white">
+                <a href="/main">MAIN NEWS</a>
+            </li>
+            <li class="hidden md:block">|</li>
+            <li id="menu-item-23" class="mb-4 py-2 px-3 hover:text-white hover:bg-amber-600 text-black duration-300 transition rounded md:text-left text-center bg-amber-300 md:bg-white">
+                <a href="/featured">FEATURED NEWS</a>
+            </li>
+            <li class="hidden md:block">|</li>
+            <li id="menu-item-23" class="mb-4 py-2 px-3 hover:text-white hover:bg-amber-600 text-black duration-300 transition rounded md:text-left text-center bg-amber-300 md:bg-white">
+                <a href="/press-release">PRESS RELEASE</a>
+            </li>
+            <li class="hidden md:block">|</li>
+            <li id="menu-item-23" class="mb-4 py-2 px-3 hover:text-white hover:bg-amber-600 text-black duration-300 transition rounded md:text-left text-center bg-amber-300 md:bg-white">
+                <a href="/live">LIVE</a>
+            </li>
+        </ul>
+    </div>
+</nav>

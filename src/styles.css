@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'fml-ttindulekhanormal';
+    src: url('assets/fonts/fml-tt-indulekha-webfont.woff2') format('woff2'),
+        url('assets/fonts/fml-tt-indulekha-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    
+}
+@font-face { font-family: Meera; src: url('assets/fonts/Meera.ttf'); } 
+
+.mal-text1{
+    font-family: fml-ttindulekhanormal, sans-serif;
+}
+.mal-text2{
+    font-family: Meera, sans-serif;
+}
+.bg-jsc{
+    background-image: url('assets/images/jsc-logo-gray-trans.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 150px;
+}
+.bg-jsc-sm{
+    background-image: url('assets/images/jsc-logo-gray-trans.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80px;
+}
