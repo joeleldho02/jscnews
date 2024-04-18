@@ -9,12 +9,15 @@ import { SettingsComponent } from './pages/settings/settings.component';
 import { AddNewsComponent } from './components/add-news/add-news.component';
 import { LoginComponent } from './components/login/login.component';
 import { loginGuard } from './service/auth-guards/login.guard';
-import { CategoryNewsComponent } from './components/category-news/category-news.component';
+import { CategoryNewsComponent } from './pages/category-news/category-news.component';
 
 const routes: Routes = [
   {path:"", component: HomeComponent },
   {path:"news", component: NewsComponent },
-  {path:"main", component: CategoryNewsComponent },
+  {path:"news/article-slug", component: NewsComponent },
+  {path:"main", component: CategoryNewsComponent, data:{category :'main'} },
+  {path:"featured", component: CategoryNewsComponent, data:{category :'featured'} },
+  {path:"press-release", component: CategoryNewsComponent, data:{category :'press-release'} },
   {path:"live", component: LiveComponent },
   {path:'admin/login', component: LoginComponent, data:{isAdmin:false} }, //, canActivate:[loginGuard]},
   {path:'admin', component: AdminComponent }, //, canActivate: [adminGuard]},

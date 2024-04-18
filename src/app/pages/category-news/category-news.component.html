@@ -1,0 +1,193 @@
+<app-header/>
+
+<section>
+    <div class="mt-5 px-2 m-auto md:grid lg:grid-cols-6 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl">
+        <!-- Left Half -->
+        <div class="lg:col-span-4 md:pe-5">
+            <!-- Page Title -->
+            <h3 class="md:text-3xl text-lg font-bold uppercase">{{category | uppercase}} NEWS</h3>
+            <hr class="h-1 bg-blue-400">
+
+            <!-- Neww Article List -->    
+            <div class="grid grid-cols-5 md:grid-cols-6 gap-2 md:gap-5 my-2">
+                <div class="col-span-2 md:col-span-2 flex items-center">
+                    <div style="padding-top: 75%;" class="relative bg-gray-200 rounded-xl md:h-36 w-full bg-jsc-sm overflow-hidden">
+                        <a href="{{smeUrl}}" class="absolute h-full w-full object-cover top-0 ">
+                          <img src="assets/images/maxresdefault.jpg" alt="" class="object-cover h-full w-full object-top">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-span-3 md:col-span-4 flex-col my-auto ">
+                    <a href="{{smeUrl}}">
+                        <p class="mal-text1 font-semibold text-lg md:text-xl md:text-justify leading-7 md:pt-3  text-ellipsis line-clamp-2">{{smeTitle}}</p>
+                        <div class="h-full">
+                            <p class="mal-text2 text-lg md:text-xl md:text-justify leading-7 md:pt-3  text-ellipsis line-clamp-4">{{smeTxt}}</p>
+                        </div>
+                    </a>
+                    <div class="hidden sm:flex items-center text-nowrap py-1 w-full">
+                        <img class="w-5" src="https://img.icons8.com/color/48/calendar--v1.png" loading="lazy" alt=""/>
+                        <p class="text-sm font-medium">{{smeDate | date:'fullDate'}}</p>
+                        <a href="{{smeUrl}}" class="flex-1"><p class="text-right text-red-800 text-sm font-medium uppercase">{{smeCategory}}</p></a>
+                    </div>
+                </div>
+                <div class="sm:hidden col-span-5 flex items-center text-nowrap px-5 w-full">
+                    <img class="w-5" src="https://img.icons8.com/color/48/calendar--v1.png" loading="lazy" alt=""/>
+                    <p class="text-xs font-medium">{{smeDate | date:'fullDate'}}</p>
+                    <a href="{{smeUrl}}" class="flex-1"><p class="text-right text-red-800 text-xs font-medium uppercase">{{smeCategory}}</p></a>
+                </div>
+            </div>                
+            <hr class="bg-gray-400">
+            <div class="grid grid-cols-5 md:grid-cols-6 gap-2 md:gap-5 my-2">
+                <div class="col-span-2 md:col-span-2 flex items-center">
+                    <div style="padding-top: 75%;" class="relative bg-gray-200 rounded-xl md:h-36 w-full bg-jsc-sm overflow-hidden">
+                        <a href="{{smeUrl}}" class="absolute h-full w-full object-cover top-0 ">
+                          <img src="assets/images/1.jpg" alt="" class="object-cover h-full w-full object-top">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-span-3 md:col-span-4 flex-col my-auto ">
+                    <a href="{{smeUrl}}">
+                        <p class="mal-text1 font-semibold text-lg md:text-xl md:text-justify leading-7 md:pt-3  text-ellipsis line-clamp-2">{{smeTitle}}</p>
+                        <div class="h-full">
+                            <p class="mal-text2 text-lg md:text-xl md:text-justify leading-7 md:pt-3  text-ellipsis line-clamp-4">{{smeTxt}}</p>
+                        </div>
+                    </a>
+                    <div class="hidden sm:flex items-center text-nowrap py-1 w-full">
+                        <img class="w-5" src="https://img.icons8.com/color/48/calendar--v1.png" loading="lazy" alt=""/>
+                        <p class="text-sm font-medium">{{smeDate | date:'fullDate'}}</p>
+                        <a href="{{smeUrl}}" class="flex-1"><p class="text-right text-red-800 text-sm font-medium uppercase">{{smeCategory}}</p></a>
+                    </div>
+                </div>
+                <div class="sm:hidden col-span-5 flex items-center text-nowrap px-5 w-full">
+                    <img class="w-5" src="https://img.icons8.com/color/48/calendar--v1.png" loading="lazy" alt=""/>
+                    <p class="text-xs font-medium">{{smeDate | date:'fullDate'}}</p>
+                    <a href="{{smeUrl}}" class="flex-1"><p class="text-right text-red-800 text-xs font-medium uppercase">{{smeCategory}}</p></a>
+                </div>
+            </div>                
+            <hr class="bg-gray-400">
+            <div class="grid grid-cols-5 md:grid-cols-6 gap-2 md:gap-5 my-2">
+                <div class="col-span-2 md:col-span-2 flex items-center">
+                    <div style="padding-top: 75%;" class="relative bg-gray-200 rounded-xl md:h-36 w-full bg-jsc-sm overflow-hidden">
+                        <a href="{{smeUrl}}" class="absolute h-full w-full object-cover top-0 ">
+                          <img src="https://drive.google.com/thumbnail?id=19dfuFpxFhRGYqrCTpiYGHCVqjcwBBoE0&sz=w1000" alt="" class="object-cover h-full w-full object-top">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-span-3 md:col-span-4 flex-col my-auto ">
+                    <a href="{{smeUrl}}">
+                        <p class="mal-text1 font-semibold text-lg md:text-xl md:text-justify leading-7 md:pt-3  text-ellipsis line-clamp-2">{{smeTitle}}</p>
+                        <div class="h-full">
+                            <p class="mal-text2 text-lg md:text-xl md:text-justify leading-7 md:pt-3  text-ellipsis line-clamp-4">{{smeTxt}}</p>
+                        </div>
+                    </a>
+                    <div class="hidden sm:flex items-center text-nowrap py-1 w-full">
+                        <img class="w-5" src="https://img.icons8.com/color/48/calendar--v1.png" loading="lazy" alt=""/>
+                        <p class="text-sm font-medium">{{smeDate | date:'fullDate'}}</p>
+                        <a href="{{smeUrl}}" class="flex-1"><p class="text-right text-red-800 text-sm font-medium uppercase">{{smeCategory}}</p></a>
+                    </div>
+                </div>
+                <div class="sm:hidden col-span-5 flex items-center text-nowrap px-5 w-full">
+                    <img class="w-5" src="https://img.icons8.com/color/48/calendar--v1.png" loading="lazy" alt=""/>
+                    <p class="text-xs font-medium">{{smeDate | date:'fullDate'}}</p>
+                    <a href="{{smeUrl}}" class="flex-1"><p class="text-right text-red-800 text-xs font-medium uppercase">{{smeCategory}}</p></a>
+                </div>
+            </div>                
+            <hr class="bg-gray-400">
+            <div class="grid grid-cols-5 md:grid-cols-6 gap-2 md:gap-5 my-2">
+                <div class="col-span-2 md:col-span-2 flex items-center">
+                    <div style="padding-top: 75%;" class="relative bg-gray-200 rounded-xl md:h-36 w-full bg-jsc-sm overflow-hidden">
+                        <a href="{{smeUrl}}" class="absolute h-full w-full object-cover top-0 ">
+                          <img src="assets/images/maxresdefault.jpg" alt="" class="object-cover h-full w-full object-top">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-span-3 md:col-span-4 flex-col my-auto ">
+                    <a href="{{smeUrl}}">
+                        <p class="mal-text1 font-semibold text-lg md:text-xl md:text-justify leading-7 md:pt-3  text-ellipsis line-clamp-2">{{smeTitle}}</p>
+                        <div class="h-full">
+                            <p class="mal-text2 text-lg md:text-xl md:text-justify leading-7 md:pt-3  text-ellipsis line-clamp-4">{{smeTxt}}</p>
+                        </div>
+                    </a>
+                    <div class="hidden sm:flex items-center text-nowrap py-1 w-full">
+                        <img class="w-5" src="https://img.icons8.com/color/48/calendar--v1.png" loading="lazy" alt=""/>
+                        <p class="text-sm font-medium">{{smeDate | date:'fullDate'}}</p>
+                        <a href="{{smeUrl}}" class="flex-1"><p class="text-right text-red-800 text-sm font-medium uppercase">{{smeCategory}}</p></a>
+                    </div>
+                </div>
+                <div class="sm:hidden col-span-5 flex items-center text-nowrap px-5 w-full">
+                    <img class="w-5" src="https://img.icons8.com/color/48/calendar--v1.png" loading="lazy" alt=""/>
+                    <p class="text-xs font-medium">{{smeDate | date:'fullDate'}}</p>
+                    <a href="{{smeUrl}}" class="flex-1"><p class="text-right text-red-800 text-xs font-medium uppercase">{{smeCategory}}</p></a>
+                </div>
+            </div>                
+            <hr class="bg-gray-400">
+            <div class="grid grid-cols-5 md:grid-cols-6 gap-2 md:gap-5 my-2">
+                <div class="col-span-2 md:col-span-2 flex items-center">
+                    <div style="padding-top: 75%;" class="relative bg-gray-200 rounded-xl md:h-36 w-full bg-jsc-sm overflow-hidden">
+                        <a href="{{smeUrl}}" class="absolute h-full w-full object-cover top-0 ">
+                          <img src="" alt="" class="object-cover h-full w-full object-top">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-span-3 md:col-span-4 flex-col my-auto ">
+                    <a href="{{smeUrl}}">
+                        <p class="mal-text1 font-semibold text-lg md:text-xl md:text-justify leading-7 md:pt-3  text-ellipsis line-clamp-2">{{smeTitle}}</p>
+                        <div class="h-full">
+                            <p class="mal-text2 text-lg md:text-xl md:text-justify leading-7 md:pt-3  text-ellipsis line-clamp-4">{{smeTxt}}</p>
+                        </div>
+                    </a>
+                    <div class="hidden sm:flex items-center text-nowrap py-1 w-full">
+                        <img class="w-5" src="https://img.icons8.com/color/48/calendar--v1.png" loading="lazy" alt=""/>
+                        <p class="text-sm font-medium">{{smeDate | date:'fullDate'}}</p>
+                        <a href="{{smeUrl}}" class="flex-1"><p class="text-right text-red-800 text-sm font-medium uppercase">{{smeCategory}}</p></a>
+                    </div>
+                </div>
+                <div class="sm:hidden col-span-5 flex items-center text-nowrap px-5 w-full">
+                    <img class="w-5" src="https://img.icons8.com/color/48/calendar--v1.png" loading="lazy" alt=""/>
+                    <p class="text-xs font-medium">{{smeDate | date:'fullDate'}}</p>
+                    <a href="{{smeUrl}}" class="flex-1"><p class="text-right text-red-800 text-xs font-medium uppercase">{{smeCategory}}</p></a>
+                </div>
+            </div>                
+            <hr class="bg-gray-400">
+            <div class="grid grid-cols-5 md:grid-cols-6 gap-2 md:gap-5 my-2">
+                <div class="col-span-2 md:col-span-2 flex items-center">
+                    <div style="padding-top: 75%;" class="relative bg-gray-200 rounded-xl md:h-36 w-full bg-jsc-sm overflow-hidden">
+                        <a href="{{smeUrl}}" class="absolute h-full w-full object-cover top-0 ">
+                          <img src="https://drive.google.com/thumbnail?id=19dfuFpxFhRGYqrCTpiYGHCVqjcwBBoE0&sz=w1000" alt="" class="object-cover h-full w-full object-top">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-span-3 md:col-span-4 flex-col my-auto ">
+                    <a href="{{smeUrl}}">
+                        <p class="mal-text1 font-semibold text-lg md:text-xl md:text-justify leading-7 md:pt-3  text-ellipsis line-clamp-2">{{smeTitle}}</p>
+                        <div class="h-full">
+                            <p class="mal-text2 text-lg md:text-xl md:text-justify leading-7 md:pt-3  text-ellipsis line-clamp-4">{{smeTxt}}</p>
+                        </div>
+                    </a>
+                    <div class="hidden sm:flex items-center text-nowrap py-1 w-full">
+                        <img class="w-5" src="https://img.icons8.com/color/48/calendar--v1.png" loading="lazy" alt=""/>
+                        <p class="text-sm font-medium">{{smeDate | date:'fullDate'}}</p>
+                        <a href="{{smeUrl}}" class="flex-1"><p class="text-right text-red-800 text-sm font-medium uppercase">{{smeCategory}}</p></a>
+                    </div>
+                </div>
+                <div class="sm:hidden col-span-5 flex items-center text-nowrap px-5 w-full">
+                    <img class="w-5" src="https://img.icons8.com/color/48/calendar--v1.png" loading="lazy" alt=""/>
+                    <p class="text-xs font-medium">{{smeDate | date:'fullDate'}}</p>
+                    <a href="{{smeUrl}}" class="flex-1"><p class="text-right text-red-800 text-xs font-medium uppercase">{{smeCategory}}</p></a>
+                </div>
+            </div>                
+            <hr class="bg-gray-400">
+        </div>
+
+        <!-- Right Half -->
+        <div class="lg:col-span-2 border-gray-200 md:border-s-2 md:ps-5 mb-5 ms-2 bg-slate-100 flex">  
+            <div class="m-auto">
+                ADVERTISEMENT/RESOURES
+            </div>          
+        </div>
+    </div>
+    
+</section>
+    
+
+<app-footer/>

@@ -14,7 +14,7 @@ import { SettingsComponent } from './pages/settings/settings.component';
 import { AddNewsComponent } from './components/add-news/add-news.component';
 import { LoginComponent } from './components/login/login.component';
 import { HeaderComponent } from './components/header/header.component';
-import { CategoryNewsComponent } from './components/category-news/category-news.component';
+import { CategoryNewsComponent } from './pages/category-news/category-news.component';
 import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
