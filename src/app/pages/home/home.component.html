@@ -2,7 +2,7 @@
 
 <section class="flex justify-center">
     <!-- FLASH NEWS -->
-    <div class=" py-2 px-14 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl">
+    <div class="px-2  py-2 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl">
         <div class="flex items-center w-full">
             <div class="bg-red-600">
                 <p class="text-white uppercase text-nowrap text-sm md:text-base font-semibold px-1 md:px-5 py-1 md:py-2">Flash News</p>
@@ -15,7 +15,7 @@
 <!-- <p class="mal-text2 text-xl text-justify leading-7 ">{{smeTxt}}</p> -->
 
 <section class="flex justify-center">
-    <div class="md:grid md:grid-cols-7 px-14 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl">
+    <div class="px-2 md:grid md:grid-cols-7 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl">
         <!-- MOBILE - LIVE NOW -->
         <div class="md:hidden">
             <a href="/press-release" class="flex gap-1 items-center">
@@ -28,8 +28,11 @@
             <!-- MOBILE - LIVE NOW ITEM -->
             <div class="my-2 p-1 mb-2">
                 <div class="">
-                    <div class="bg-gray-200 rounded-xl h-44 overflow-hidden bg-jsc-sm">
-                        <a href="{{smeUrl}}"><img src="" alt="" class="object-cover object-top"></a>
+                    <!-- <div class="bg-gray-200 rounded-xl h-44 overflow-hidden bg-jsc-sm">
+                        <a href="{{smeUrl}}"><img src="assets/images/maxresdefault.jpg" alt="asd" class="object-cover object-top"></a>
+                    </div> -->
+                    <div class="bg-gray-200 rounded-xl overflow-hidden bg-jsc-sm">
+                        <a href="{{smeUrl}}"><img src="assets/images/maxresdefault.jpg" alt="" class="w-full"></a>
                     </div>
                 </div>
                 <div class="flex items-center gap-3">
@@ -48,27 +51,28 @@
                 <a href="{{latestNews.url}}" >
                     <p class="mal-text1 text-2xl md:text-3xl text-justify md:text-left font-extrabold leading-8">{{latestNews.title}}</p>
                 </a>
-                <div class="my-3 rounded-xl w-full min-h-60 md:h-96 mx-auto overflow-hidden flex border-2 bg-gray-200 border-blue-950 bg-jsc">
-                    <a href="{{latestNews.url}}">
-                        <img class="object-cover" src="" alt="">
+                <div class="my-3 rounded-xl w-full min-h-60 md:h-96 mx-auto overflow-hidden flex border-2 bg-black border-blue-950 bg-jsc">
+                    <a href="{{latestNews.url}}" class="relative top-0 max-h-96 md:h-full w-full bg-pink-600 overflow-hidden">
+                        <img class="absolute top-0 left-0 object-cover object-top h-full w-full" src="assets/images/maxresdefault.jpg" alt="">
+                        <!-- <img class="absolute top-0 left-0 object-cover object-top h-full w-full" src="https://drive.google.com/thumbnail?id=19dfuFpxFhRGYqrCTpiYGHCVqjcwBBoE0&sz=w1000" alt=""> -->
+                        <!-- <img class="absolute top-0 left-0 object-cover object-top h-full w-full" src="assets/images/1.jpg" alt=""> -->
                     </a>
                 </div>
             </div>
             <hr class="bg-gray-400">
             <!-- LATEST NEWS LIST ITEM -->
             <div class="mb-7 md:mb-0">
-                <div class="grid grid-cols-5 gap-2 md:gap-5 my-2">
-                    <div class="col-span-2">
-                        <div class="relative bg-gray-200 rounded-xl h-28 md:min-w-32 md:h-44 md:w-auto w-full overflow-hidden bg-jsc-sm flex">
-                            <a href="{{smeUrl}}" class="w-full">
-                                <img src="https://drive.google.com/thumbnail?id=19dfuFpxFhRGYqrCTpiYGHCVqjcwBBoE0&sz=w1000" alt="" class="h-full w-full object-cover object-center">
+                <div class="grid grid-cols-5 md:grid-cols-6 gap-2 md:gap-5 my-2">
+                    <div class="col-span-2 md:col-span-2">
+                        <div style="padding-top: 75%;" class="relative bg-gray-200 rounded-xl md:h-36 w-full bg-jsc-sm overflow-hidden">
+                            <a href="{{smeUrl}}" class="absolute h-full w-full object-cover top-0 ">
+                              <img src="https://drive.google.com/thumbnail?id=19dfuFpxFhRGYqrCTpiYGHCVqjcwBBoE0&sz=w1000" alt="" class="object-cover h-full w-full object-top">
                             </a>
-                            <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-70"></div>
                         </div>
                     </div>
-                    <div class="col-span-3 flex-col my-auto">
+                    <div class="col-span-3 md:col-span-4 flex-col my-auto">
                         <a href="{{smeUrl}}">
-                            <p class="mal-text1 font-semibold text-lg md:text-xl md:text-justify leading-7 md:pt-3">{{smeTitle}}</p>
+                            <p class="mal-text1 font-semibold text-lg md:text-xl md:text-justify leading-7 md:pt-3">ajkshdlfkajshdlf{{smeTitle}}</p>
                         </a>
                         <div class="hidden sm:flex items-center text-nowrap py-1 w-full">
                             <img class="w-5" src="https://img.icons8.com/color/48/calendar--v1.png" loading="lazy" alt=""/>
@@ -78,10 +82,10 @@
                     </div>
                     <div class="sm:hidden col-span-5 flex items-center text-nowrap py-1 w-full">
                         <img class="w-5" src="https://img.icons8.com/color/48/calendar--v1.png" loading="lazy" alt=""/>
-                        <p class="text-sm font-medium">{{smeDate | date:'fullDate'}}</p>
-                        <a href="#" class="flex-1"><p class="text-right text-blue-500 text-sm font-medium uppercase">{{smeCategory}}</p></a>
+                        <p class="text-xs font-medium">{{smeDate | date:'fullDate'}}</p>
+                        <a href="#" class="flex-1"><p class="text-right text-blue-500 text-xs font-medium uppercase">{{smeCategory}}</p></a>
                     </div>
-                </div>
+                </div>                
                 <hr class="bg-gray-400">
                 <a href="/top-news" class="float-end text-red-800 text-sm italic px-5 font-medium">Read more latest news -></a>
             </div>
@@ -90,15 +94,17 @@
             <hr class="h-1 bg-blue-400">
             <!-- FEATURED NEWS LIST ITEM -->
             <div class="mb-7 md:mb-0">
-                <div class="grid grid-cols-5 gap-2 md:gap-5 my-2">
-                    <div class="col-span-2">
-                        <div class="bg-gray-200 rounded-xl h-28 md:min-w-32 md:h-44 md:w-auto w-full overflow-hidden bg-jsc-sm flex">
-                            <a href="{{smeUrl}}" class="w-full"><img src="https://drive.google.com/?id=19dfuFpxFhRGYqrCTpiYGHCVqjcwBBoE0&sz=w1000" alt="" class="h-full w-full object-cover object-top"></a>
+                <div class="grid grid-cols-5 md:grid-cols-6 gap-2 md:gap-5 my-2">
+                    <div class="col-span-2 md:col-span-2">
+                        <div style="padding-top: 75%;" class="relative bg-gray-200 rounded-xl md:h-36 w-full bg-jsc-sm overflow-hidden">
+                            <a href="{{smeUrl}}" class="absolute h-full w-full object-cover top-0 ">
+                              <img src="assets/images/maxresdefault.jpg" alt="" class="object-cover h-full w-full object-top">
+                            </a>
                         </div>
                     </div>
-                    <div class="col-span-3 flex-col my-auto">
+                    <div class="col-span-3 md:col-span-4 flex-col my-auto">
                         <a href="{{smeUrl}}">
-                            <p class="mal-text1 font-semibold text-lg md:text-xl md:text-justify leading-7 md:pt-3">{{smeTitle}}</p>
+                            <p class="mal-text1 font-semibold text-lg md:text-xl md:text-justify leading-7 md:pt-3">ajkshdlfkajshdlf{{smeTitle}}</p>
                         </a>
                         <div class="hidden sm:flex items-center text-nowrap py-1 w-full">
                             <img class="w-5" src="https://img.icons8.com/color/48/calendar--v1.png" loading="lazy" alt=""/>
@@ -108,10 +114,85 @@
                     </div>
                     <div class="sm:hidden col-span-5 flex items-center text-nowrap py-1 w-full">
                         <img class="w-5" src="https://img.icons8.com/color/48/calendar--v1.png" loading="lazy" alt=""/>
-                        <p class="text-sm font-medium">{{smeDate | date:'fullDate'}}</p>
-                        <a href="#" class="flex-1"><p class="text-right text-blue-500 text-sm font-medium uppercase">{{smeCategory}}</p></a>
+                        <p class="text-xs font-medium">{{smeDate | date:'fullDate'}}</p>
+                        <a href="#" class="flex-1"><p class="text-right text-blue-500 text-xs font-medium uppercase">{{smeCategory}}</p></a>
                     </div>
-                </div>
+                </div>                
+                <hr class="bg-gray-400">
+                <div class="grid grid-cols-5 md:grid-cols-6 gap-2 md:gap-5 my-2">
+                    <div class="col-span-2 md:col-span-2">
+                        <div style="padding-top: 75%;" class="relative bg-gray-200 rounded-xl md:h-36 w-full bg-jsc-sm overflow-hidden">
+                            <a href="{{smeUrl}}" class="absolute h-full w-full object-cover top-0 ">
+                              <img src="assets/images/1.jpg" alt="" class="object-cover h-full w-full object-top">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-span-3 md:col-span-4 flex-col my-auto">
+                        <a href="{{smeUrl}}">
+                            <p class="mal-text1 font-semibold text-lg md:text-xl md:text-justify leading-7 md:pt-3">ajkshdlfkajshdlf{{smeTitle}}</p>
+                        </a>
+                        <div class="hidden sm:flex items-center text-nowrap py-1 w-full">
+                            <img class="w-5" src="https://img.icons8.com/color/48/calendar--v1.png" loading="lazy" alt=""/>
+                            <p class="text-sm font-medium">{{smeDate | date:'fullDate'}}</p>
+                            <a href="#" class="flex-1"><p class="text-right text-blue-500 text-sm font-medium uppercase">{{smeCategory}}</p></a>
+                        </div>
+                    </div>
+                    <div class="sm:hidden col-span-5 flex items-center text-nowrap py-1 w-full">
+                        <img class="w-5" src="https://img.icons8.com/color/48/calendar--v1.png" loading="lazy" alt=""/>
+                        <p class="text-xs font-medium">{{smeDate | date:'fullDate'}}</p>
+                        <a href="#" class="flex-1"><p class="text-right text-blue-500 text-xs font-medium uppercase">{{smeCategory}}</p></a>
+                    </div>
+                </div>                
+                <hr class="bg-gray-400">
+                <div class="grid grid-cols-5 md:grid-cols-6 gap-2 md:gap-5 my-2">
+                    <div class="col-span-2 md:col-span-2">
+                        <div style="padding-top: 75%;" class="relative bg-gray-200 rounded-xl md:h-36 w-full bg-jsc-sm overflow-hidden">
+                            <a href="{{smeUrl}}" class="absolute h-full w-full object-cover top-0 ">
+                              <img src="assets/images/maxresdefault.jpg" alt="" class="object-cover h-full w-full object-top">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-span-3 md:col-span-4 flex-col my-auto">
+                        <a href="{{smeUrl}}">
+                            <p class="mal-text1 font-semibold text-lg md:text-xl md:text-justify leading-7 md:pt-3">ajkshdlfkajshdlf{{smeTitle}}</p>
+                        </a>
+                        <div class="hidden sm:flex items-center text-nowrap py-1 w-full">
+                            <img class="w-5" src="https://img.icons8.com/color/48/calendar--v1.png" loading="lazy" alt=""/>
+                            <p class="text-sm font-medium">{{smeDate | date:'fullDate'}}</p>
+                            <a href="#" class="flex-1"><p class="text-right text-blue-500 text-sm font-medium uppercase">{{smeCategory}}</p></a>
+                        </div>
+                    </div>
+                    <div class="sm:hidden col-span-5 flex items-center text-nowrap py-1 w-full">
+                        <img class="w-5" src="https://img.icons8.com/color/48/calendar--v1.png" loading="lazy" alt=""/>
+                        <p class="text-xs font-medium">{{smeDate | date:'fullDate'}}</p>
+                        <a href="#" class="flex-1"><p class="text-right text-blue-500 text-xs font-medium uppercase">{{smeCategory}}</p></a>
+                    </div>
+                </div>                
+                <hr class="bg-gray-400">
+                <div class="grid grid-cols-5 md:grid-cols-6 gap-2 md:gap-5 my-2">
+                    <div class="col-span-2 md:col-span-2">
+                        <div style="padding-top: 75%;" class="relative bg-gray-200 rounded-xl md:h-36 w-full bg-jsc-sm overflow-hidden">
+                            <a href="{{smeUrl}}" class="absolute h-full w-full object-cover top-0 ">
+                              <img src="assets/images/1.jpg" alt="" class="object-cover h-full w-full object-top">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-span-3 md:col-span-4 flex-col my-auto">
+                        <a href="{{smeUrl}}">
+                            <p class="mal-text1 font-semibold text-lg md:text-xl md:text-justify leading-7 md:pt-3">ajkshdlfkajshdlf{{smeTitle}}</p>
+                        </a>
+                        <div class="hidden sm:flex items-center text-nowrap py-1 w-full">
+                            <img class="w-5" src="https://img.icons8.com/color/48/calendar--v1.png" loading="lazy" alt=""/>
+                            <p class="text-sm font-medium">{{smeDate | date:'fullDate'}}</p>
+                            <a href="#" class="flex-1"><p class="text-right text-blue-500 text-sm font-medium uppercase">{{smeCategory}}</p></a>
+                        </div>
+                    </div>
+                    <div class="sm:hidden col-span-5 flex items-center text-nowrap py-1 w-full">
+                        <img class="w-5" src="https://img.icons8.com/color/48/calendar--v1.png" loading="lazy" alt=""/>
+                        <p class="text-xs font-medium">{{smeDate | date:'fullDate'}}</p>
+                        <a href="#" class="flex-1"><p class="text-right text-blue-500 text-xs font-medium uppercase">{{smeCategory}}</p></a>
+                    </div>
+                </div>                
                 <hr class="bg-gray-400">
                 <a href="/featured" class="float-end text-red-800 text-sm italic px-5 font-medium">Read more featured news -></a>
             </div>
@@ -119,8 +200,8 @@
         
         <!-- RIGHT SIDE -->
         <div class="md:col-span-2 border-gray-200 md:border-s-2 md:ps-5 mb-10">
+            <!-- LIVE NOW -->
             <div class="hidden md:block">
-                <!-- LIVE NOW -->
                 <a href="/press-release" class="flex gap-1 items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="w-7 animate-pulse" viewBox="0 0 48 48">
                         <circle cx="24" cy="24" r="6" fill="#f44336"></circle><path fill="#f44336" d="M17.09,16.789L14.321,13.9C11.663,16.448,10,20.027,10,24s1.663,7.552,4.321,10.1l2.769-2.889 C15.19,29.389,14,26.833,14,24C14,21.167,15.19,18.61,17.09,16.789z"></path><path fill="#f44336" d="M33.679,13.9l-2.769,2.889C32.81,18.611,34,21.167,34,24c0,2.833-1.19,5.389-3.09,7.211l2.769,2.889 C36.337,31.552,38,27.973,38,24S36.337,16.448,33.679,13.9z"></path><g><path fill="#f44336" d="M11.561,11.021l-2.779-2.9C4.605,12.125,2,17.757,2,24s2.605,11.875,6.782,15.879l2.779-2.9 C8.142,33.701,6,29.1,6,24S8.142,14.299,11.561,11.021z"></path><path fill="#f44336" d="M39.218,8.121l-2.779,2.9C39.858,14.299,42,18.9,42,24s-2.142,9.701-5.561,12.979l2.779,2.9 C43.395,35.875,46,30.243,46,24S43.395,12.125,39.218,8.121z"></path></g>
@@ -131,8 +212,8 @@
                 <!-- LIVE NOW LIST -->
                 <div class="my-2 p-1 mb-5">
                     <div class="">
-                        <div class="bg-gray-200 rounded-xl h-32 overflow-hidden bg-jsc-sm">
-                            <a href="{{smeUrl}}"><img src="" alt="" class="object-cover object-top"></a>
+                        <div class="bg-gray-200 rounded-xl overflow-hidden bg-jsc-sm">
+                            <a href="{{smeUrl}}"><img src="assets/images/maxresdefault.jpg" alt="" class="w-full"></a>
                         </div>
                     </div>
                     <div class="">
@@ -147,20 +228,70 @@
             <hr class="h-1 bg-blue-400">
             <!-- PRESS RELEASE LIST -->
             <div class="mb-7 md:mb-0">
-                <div class="grid grid-cols-5 md:gap-5 gap-1 my-1 p-1">
-                    <div class="col-span-2">
-                        <div class="bg-gray-200 rounded-xl h-28 md:min-w-32 md:h-32 md:w-auto w-full overflow-hidden bg-jsc-sm flex">
-                            <a href="{{smeUrl}}"><img src="https://drive.google.com/thumbnail?id=19dfuFpxFhRGYqrCTpiYGHCVqjcwBBoE0&sz=w1000" alt="" class="h-full w-full object-cover object-top"></a>
+                <div class="grid grid-cols-5 md:grid-cols-1 lg:grid-cols-5 xl:gap-5 gap-1 my-1 p-1 ">
+                    <div class="col-span-2 md:col-span-1 lg:col-span-2 ">
+                        <div style="padding-top: 75%;" class="relative bg-gray-200 rounded-xl md:h-28 w-full bg-jsc-sm overflow-hidden">
+                            <a href="{{smeUrl}}" class="absolute h-full w-full object-cover top-0 ">
+                              <img src="assets/images/1.jpg" alt="" class="object-cover h-full w-full object-top">
+                            </a>
                         </div>
                     </div>
-                    <div class="col-span-3 flex-col items-center">
+                    <div class="col-span-3 md:col-span-1 lg:col-span-3 flex-col items-center ">
                         <a href="{{smeUrl}}">
                             <p class="mal-text1 md:text-sm font-semibold md:justify text-lg text-ellipsis leading-5 md:leading-4 p-1">{{smeTitle}}</p>
                         </a>
                         <a href="#"><p class="text-blue-500 text-right text-xs font-medium uppercase p-1">{{smeCategory}}</p></a>
                     </div>
                 </div>
-                <hr class="sm-gray-400"> 
+                <hr class="bg-gray-400"> 
+                <div class="grid grid-cols-5 md:grid-cols-1 lg:grid-cols-5 xl:gap-5 gap-1 my-1 p-1 ">
+                    <div class="col-span-2 md:col-span-1 lg:col-span-2 ">
+                        <div style="padding-top: 75%;" class="relative bg-gray-200 rounded-xl md:h-28 w-full bg-jsc-sm overflow-hidden">
+                            <a href="{{smeUrl}}" class="absolute h-full w-full object-cover top-0 ">
+                              <img src="assets/images/maxresdefault.jpg" alt="" class="object-cover h-full w-full object-top">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-span-3 md:col-span-1 lg:col-span-3 flex-col items-center ">
+                        <a href="{{smeUrl}}">
+                            <p class="mal-text1 md:text-sm font-semibold md:justify text-lg text-ellipsis leading-5 md:leading-4 p-1">{{smeTitle}}</p>
+                        </a>
+                        <a href="#"><p class="text-blue-500 text-right text-xs font-medium uppercase p-1">{{smeCategory}}</p></a>
+                    </div>
+                </div>
+                <hr class="bg-gray-400"> 
+                <div class="grid grid-cols-5 md:grid-cols-1 lg:grid-cols-5 xl:gap-5 gap-1 my-1 p-1 ">
+                    <div class="col-span-2 md:col-span-1 lg:col-span-2 ">
+                        <div style="padding-top: 75%;" class="relative bg-gray-200 rounded-xl md:h-28 w-full bg-jsc-sm overflow-hidden">
+                            <a href="{{smeUrl}}" class="absolute h-full w-full object-cover top-0 ">
+                              <img src="assets/images/1.jpg" alt="" class="object-cover h-full w-full object-top">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-span-3 md:col-span-1 lg:col-span-3 flex-col items-center ">
+                        <a href="{{smeUrl}}">
+                            <p class="mal-text1 md:text-sm font-semibold md:justify text-lg text-ellipsis leading-5 md:leading-4 p-1">{{smeTitle}}</p>
+                        </a>
+                        <a href="#"><p class="text-blue-500 text-right text-xs font-medium uppercase p-1">{{smeCategory}}</p></a>
+                    </div>
+                </div>
+                <hr class="bg-gray-400"> 
+                <div class="grid grid-cols-5 md:grid-cols-1 lg:grid-cols-5 xl:gap-5 gap-1 my-1 p-1 ">
+                    <div class="col-span-2 md:col-span-1 lg:col-span-2 ">
+                        <div style="padding-top: 75%;" class="relative bg-gray-200 rounded-xl md:h-28 w-full bg-jsc-sm overflow-hidden">
+                            <a href="{{smeUrl}}" class="absolute h-full w-full object-cover top-0 ">
+                              <img src="assets/images/1.jpg" alt="" class="object-cover h-full w-full object-top">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-span-3 md:col-span-1 lg:col-span-3 flex-col items-center ">
+                        <a href="{{smeUrl}}">
+                            <p class="mal-text1 md:text-sm font-semibold md:justify text-lg text-ellipsis leading-5 md:leading-4 p-1">{{smeTitle}}</p>
+                        </a>
+                        <a href="#"><p class="text-blue-500 text-right text-xs font-medium uppercase p-1">{{smeCategory}}</p></a>
+                    </div>
+                </div>
+                <hr class="bg-gray-400"> 
                 <a href="/press-release" class="float-end text-red-800 text-sm italic px-5 font-medium">View more press releases -></a>
             </div>
 
@@ -169,20 +300,38 @@
             <hr class="h-1 bg-blue-400">
             <!-- MOST READ LIST ITEM -->
             <div class="mb-7 md:mb-0">
-                <div class="grid grid-cols-5 gap-1 my-1 p-1">
-                    <div class="col-span-2">
-                        <div class="bg-gray-200 rounded-xl h-28 md:min-w-32 md:h-32 md:w-auto w-full overflow-hidden bg-jsc-sm flex">
-                            <a href="{{smeUrl}}"><img src="" alt="" class=" h-full w-full object-cover object-top"></a>
+                <div class="grid grid-cols-5 md:grid-cols-1 lg:grid-cols-5 xl:gap-5 gap-1 my-1 p-1 ">
+                    <div class="col-span-2 md:col-span-1 lg:col-span-2 ">
+                        <div style="padding-top: 75%;" class="relative bg-gray-200 rounded-xl md:h-28 w-full bg-jsc-sm overflow-hidden">
+                            <a href="{{smeUrl}}" class="absolute h-full w-full object-cover top-0 ">
+                              <img src="assets/images/maxresdefault.jpg" alt="" class="object-cover h-full w-full object-top">
+                            </a>
                         </div>
                     </div>
-                    <div class="col-span-3">
+                    <div class="col-span-3 md:col-span-1 lg:col-span-3 flex-col items-center ">
                         <a href="{{smeUrl}}">
                             <p class="mal-text1 md:text-sm font-semibold md:justify text-lg text-ellipsis leading-5 md:leading-4 p-1">{{smeTitle}}</p>
                         </a>
                         <a href="#"><p class="text-blue-500 text-right text-xs font-medium uppercase p-1">{{smeCategory}}</p></a>
                     </div>
                 </div>
-                <hr class="sm-gray-400"> 
+                <hr class="bg-gray-400"> 
+                <div class="grid grid-cols-5 md:grid-cols-1 lg:grid-cols-5 xl:gap-5 gap-1 my-1 p-1 ">
+                    <div class="col-span-2 md:col-span-1 lg:col-span-2 ">
+                        <div style="padding-top: 75%;" class="relative bg-gray-200 rounded-xl md:h-28 w-full bg-jsc-sm overflow-hidden">
+                            <a href="{{smeUrl}}" class="absolute h-full w-full object-cover top-0 ">
+                              <img src="assets/images/1.jpg" alt="" class="object-cover h-full w-full object-top">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-span-3 md:col-span-1 lg:col-span-3 flex-col items-center ">
+                        <a href="{{smeUrl}}">
+                            <p class="mal-text1 md:text-sm font-semibold md:justify text-lg text-ellipsis leading-5 md:leading-4 p-1">{{smeTitle}}</p>
+                        </a>
+                        <a href="#"><p class="text-blue-500 text-right text-xs font-medium uppercase p-1">{{smeCategory}}</p></a>
+                    </div>
+                </div>
+                <hr class="bg-gray-400"> 
                 <a href="/most-read" class="float-end text-red-800 text-sm italic px-5 font-medium">View more popular news -></a>
             </div>
         </div>
