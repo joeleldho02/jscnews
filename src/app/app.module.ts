@@ -17,7 +17,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { CategoryNewsComponent } from './pages/category-news/category-news.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ShowNewsComponent } from './pages/show-news/show-news.component';
+import { ShowNewsComponent } from './components/show-news/show-news.component';
 
 @NgModule({
   declarations: [

@@ -10,7 +10,7 @@ import { AddNewsComponent } from './components/add-news/add-news.component';
 import { LoginComponent } from './pages/login/login.component';
 import { loginGuard } from './service/auth-guards/login.guard';
 import { CategoryNewsComponent } from './pages/category-news/category-news.component';
-import { ShowNewsComponent } from './pages/show-news/show-news.component';
+import { ShowNewsComponent } from './components/show-news/show-news.component';
 
 const routes: Routes = [
   {path:"", component: HomeComponent },

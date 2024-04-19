@@ -12,4 +12,5 @@ export class ShowNewsComponent {
   smeDate = new Date(Date.now());
   smeUrl='/news/article-slug';
   isPublished = true;
+
 }
