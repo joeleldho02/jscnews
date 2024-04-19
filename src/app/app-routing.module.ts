@@ -7,9 +7,10 @@ import { AdminComponent } from './pages/admin/admin.component';
 import { AboutComponent } from './pages/about/about.component';
 import { SettingsComponent } from './pages/settings/settings.component';
 import { AddNewsComponent } from './components/add-news/add-news.component';
-import { LoginComponent } from './components/login/login.component';
+import { LoginComponent } from './pages/login/login.component';
 import { loginGuard } from './service/auth-guards/login.guard';
 import { CategoryNewsComponent } from './pages/category-news/category-news.component';
+import { ShowNewsComponent } from './pages/show-news/show-news.component';
 
 const routes: Routes = [
   {path:"", component: HomeComponent },
@@ -19,10 +20,16 @@ const routes: Routes = [
   {path:"featured", component: CategoryNewsComponent, data:{category :'featured'} },
   {path:"press-release", component: CategoryNewsComponent, data:{category :'press-release'} },
   {path:"live", component: LiveComponent },
-  {path:'admin/login', component: LoginComponent, data:{isAdmin:false} }, //, canActivate:[loginGuard]},
-  {path:'admin', component: AdminComponent }, //, canActivate: [adminGuard]},
-  {path:'admin/add-news', component: AddNewsComponent, data:{isEdit:false} }, //, canActivate:[adminGuard]},
-  {path:'admin/edit-news', component: AddNewsComponent, data:{isEdit:true} }, //, canActivate:[adminGuard]},
+  {path:'admin/login', component: LoginComponent, data:{isAdmin:true} }, //, canActivate:[loginGuard]},
+  {
+    path:'admin', 
+    component: AdminComponent,
+    children:[
+      {path:'', component: ShowNewsComponent, data:{isEdit:false} }, //, canActivate:[adminGuard]},
+      {path:'news', component: ShowNewsComponent, data:{isEdit:false} }, //, canActivate:[adminGuard]},
+      {path:'news/add', component: AddNewsComponent, data:{isEdit:true} }, //, canActivate:[adminGuard]},
+    ]
+   }, //, canActivate: [adminGuard]},
   {path:'admin/settings', component: SettingsComponent }, //, canActivate:[adminGuard]},
   {path:'about', component: AboutComponent},
   {path:'**', redirectTo:'/'},

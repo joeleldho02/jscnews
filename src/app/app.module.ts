@@ -12,10 +12,12 @@ import { EffectsModule } from '@ngrx/effects';
 import { AboutComponent } from './pages/about/about.component';
 import { SettingsComponent } from './pages/settings/settings.component';
 import { AddNewsComponent } from './components/add-news/add-news.component';
-import { LoginComponent } from './components/login/login.component';
+import { LoginComponent } from './pages/login/login.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CategoryNewsComponent } from './pages/category-news/category-news.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ShowNewsComponent } from './pages/show-news/show-news.component';
 
 @NgModule({
   declarations: [
@@ -30,13 +32,15 @@ import { FooterComponent } from './components/footer/footer.component';
     LoginComponent,
     HeaderComponent,
     CategoryNewsComponent,
-    FooterComponent
+    FooterComponent,
+    ShowNewsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot({}, {}),
-    EffectsModule.forRoot([])
+    EffectsModule.forRoot([]),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
