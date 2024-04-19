@@ -14,7 +14,7 @@ export class HomeComponent {
   smeDate = new Date(Date.now());
   smeUrl='/news/123456';
   latestNews = {
-    title:'­Bïhm aï³ Dïws]mcn ;lkja;lsk dfjaslkdfhqoiweuyr uqowieur uoqiuw iu qweor',
+    title:'കൊളവല്ലൂർ പൊലീസ് സ്റ്റേഷൻ പരിധിയിലെ ഈസ്റ്റ് ചെറ്റക്കണ്ടിയിലെ കാക്രോട്ട് കുന്നിൻമുകളിലെ ആളൊഴിഞ്ഞ പറമ്',
     // image:'assets\\images\\jsc-logo-white-bg.jpg',
     image:'https://drive.google.com/thumbnail?id=19dfuFpxFhRGYqrCTpiYGHCVqjcwBBoE0&sz=w1000',
     url:'#'
@@ -23,6 +23,12 @@ export class HomeComponent {
   //   title:'',
   //   image:''
   // }
+
+
+
+  show(){
+    
+  }
 }
 
 // Use Meera for content and Indulekha for headings after unicodwe to mltt conversion

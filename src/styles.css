@@ -3,6 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 @font-face {
     font-family: 'fml-ttindulekhanormal';
     src: url('assets/fonts/fml-tt-indulekha-webfont.woff2') format('woff2'),
@@ -12,6 +14,105 @@
     
 }
 @font-face { font-family: Meera; src: url('assets/fonts/Meera.ttf'); } 
+
+.mal-text-light {
+    font-family: "Noto Sans Malayalam", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+.mal-text-base {
+    font-family: "Noto Sans Malayalam", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+.mal-text-medium {
+    font-family: "Noto Sans Malayalam", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+.mal-text-semibold {
+    font-family: "Noto Sans Malayalam", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+.mal-text-bold {
+    font-family: "Noto Sans Malayalam", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+.mal-text-extrabold {
+    font-family: "Noto Sans Malayalam", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+
+
+
+.mal-text1-light {
+    font-family: "Anek Malayalam", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+.mal-text1-base {
+    font-family: "Anek Malayalam", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+.mal-text1-medium {
+    font-family: "Anek Malayalam", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+.mal-text1-semibold {
+    font-family: "Anek Malayalam", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+.mal-text1-bold {
+    font-family: "Anek Malayalam", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+.mal-text1-extrabold {
+    font-family: "Anek Malayalam", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+
 
 .mal-text1{
     font-family: fml-ttindulekhanormal, sans-serif;

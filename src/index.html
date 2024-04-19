@@ -9,8 +9,10 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-  <!-- <link rel="preload" href="assets/fonts/fml-tt-indulekha-webfont.woff2" as="font" type="font/woff" crossorigin>
-  <link rel="preload" href="assets/fonts/fml-tt-indulekha-webfont.woff" as="font" type="font/woff" crossorigin> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@100..800&family=Noto+Sans+Malayalam:wdth@75&display=swap" rel="stylesheet">
 </head>
 <body>
   <app-root/>
@@ -35,11 +37,26 @@
       }
     }
 
-    // document.addEventListener("DOMContentLoaded", function(event) {
-    //   document.querySelectorAll('img').forEach(function(img){
-  	//   img.onerror = function(){this.style.display='none';};
-    //   })
-    // });
+    document.addEventListener("DOMContentLoaded", function(event) {
+      document.querySelectorAll('img').forEach(function(img){
+  	  img.onerror = function(){this.style.display='none';};
+      })
+    });
+
+    const copyListener = (event) => {
+    const range = window.getSelection().getRangeAt(0),
+    rangeContents = range.cloneContents(),
+    pageLink = `Read more at: ${document.location.href}`,
+    helper = document.createElement("div");
+
+  helper.appendChild(rangeContents);
+  helper.innerText = helper.innerText.slice(0,40).concat('...');
+
+  event.clipboardData.setData("text/plain", `${helper.innerText}\n${pageLink}`);
+  event.clipboardData.setData("text/html", `${helper.innerHTML}<br>${pageLink}`);
+  event.preventDefault();
+};
+document.addEventListener("copy", copyListener);
 
   </script>
 
